@@ -1,8 +1,6 @@
 # Markdown Previewer
 
-![Screen Shot 2023-09-10 at 3 41 59 PM](https://github.com/jordanmichb/Markdown-Previewer/assets/95947696/4c4cfa40-0a3a-4aa8-a8c8-f38a956be078)
-
-
+![Screen Shot 2023-09-10 at 3 57 52 PM](https://github.com/jordanmichb/Markdown-Previewer/assets/95947696/64fea103-896d-49a5-bcf2-499cf11beace)
 
 
 ## Available Scripts
