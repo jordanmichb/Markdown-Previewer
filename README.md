@@ -3,7 +3,7 @@
 ![Screen Shot 2023-09-10 at 3 57 52 PM](https://github.com/jordanmichb/Markdown-Previewer/assets/95947696/64fea103-896d-49a5-bcf2-499cf11beace)
 
 
-## Available Scripts
+## Run the App
 
 In the project directory, you can run:
 
