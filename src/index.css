@@ -1,13 +1,181 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh;
+  background-color: white;
+  color: black;
+  font-family: Verdana;
+  padding: 0;
+  margin: 0;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  padding: 32px;
+  display: flex;
+}
+
+#editorContainer, #previewContainer {
+  display: flex;
+  min-height: 100px;
+}
+
+#previewContainer {
+  width: 70%;
+  flex: auto;
+}
+
+#editorContainer {
+  width: 30%;
+  flex-grow: 0;
+}
+
+#editorWindow, #previewWindow {
+  width: 100%;
+}
+
+.banner {
+  border: 1px solid #ced4da;
+  font-size: .9rem;
+  border-bottom: none;
+  height: 1.25rem;
+  background-color: #ced4da;
+  color: #424242;
+  line-height: 1.25rem;
+  letter-spacing: .3rem;
+}
+
+.bannerTitle {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#editorBanner {
+  border-top-left-radius: 5px;
+  border-right: none;
+}
+
+#previewBanner {
+  border-top-right-radius: 5px;
+  border-left: none;
+}
+
+#editor {
+  width: 100%;
+  margin: 0;
+  /* 20px is height of banner */
+  height: calc(100% - 1.25rem);
+  min-width: 30%;
+  padding: 10px 20px;
+  border: 1px solid #ced4da;
+  border-right: none;
+  border-bottom-left-radius: 5px;
+  outline: none;
+  resize: none;
+  overflow: scroll;
+  background-color: #FEFEFE;
+}
+
+#resizerTop {
+  width: 10px;
+  min-width: 10px;
+  height: 1.25rem;
+  align-self: flex-start;
+  background-color: #ced4da;
+  border-top: 1px solid #ced4da;
+}
+
+#resizerBottom {
+  border: none;
+  width: 10px;
+  min-width: 10px;
+  height: calc(100% - 1.25rem);
+  min-height: calc(100px - 1.25rem);
+  border-bottom: 1px solid #ced4da;
+  cursor: col-resize;
+  background-color: #ced4da;
+  align-self: flex-end;
+  display: flex;
+}
+
+#resizerBottom > i {
+  align-self: center;
+  color: white;
+}
+
+#preview {
+  width: 100%;
+  /* 20px is height of banner */
+  height: calc(100% - 1.25rem);
+  word-break: break-word;
+  border: 1px solid #ced4da;
+  border-left: none;
+  padding: 0 .5rem;
+  border-bottom-right-radius: 5px;
+  background-color: #FEFEFE;
+  overflow: scroll;
+  color: #424242;
+}
+
+/****************************/
+/* Markdown Preview Stlying */
+/****************************/
+
+#preview h1, #preview h2 {
+  border-bottom: 1px solid #ced4da;
+  padding-bottom: 0.5rem;
+}
+
+#preview p {
+  padding-left: 0.5rem;
+}
+
+#preview table {
+  border-collapse: collapse
+}
+
+#preview td, #preview th {
+  border: 1px solid black;
+  padding: 0.5em;
+}
+
+#preview blockquote {
+  border-left: 5px solid #B4BCBF;
+  padding-left: 0.938rem;
+  margin-left: 1.563rem;
+}
+
+#preview blockquote blockquote {
+  margin-top: 0.938rem;
+}
+
+#preview ul, #preview ol {
+  margin-left: 0.5rem;
+}
+
+#preview li {
+  margin: 0.5rem 0;
+}
+
+#preview code {
+  background-color: #E6EBED;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+#preview code {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+#preview img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
 }
